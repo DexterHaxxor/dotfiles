@@ -1,0 +1,7 @@
+{
+  "colors.enable": true,
+  "diagnostic.virtualText": true,
+  "diagnostic.virtualTextAlign": "right",
+  "diagnostic.virtualTextLevel": "warning",
+  "diagnostic.virtualTextCurrentLineOnly": false
+}
