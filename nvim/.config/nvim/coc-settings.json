@@ -3,5 +3,6 @@
   "diagnostic.virtualText": true,
   "diagnostic.virtualTextAlign": "right",
   "diagnostic.virtualTextLevel": "warning",
-  "diagnostic.virtualTextCurrentLineOnly": false
+  "diagnostic.virtualTextCurrentLineOnly": false,
+  "diagnostic.virtualTextLimitInOneLine": 1
 }
