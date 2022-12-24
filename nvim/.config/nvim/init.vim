@@ -37,6 +37,7 @@ call plug#begin()
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'nvim-tree/nvim-web-devicons'
+    Plug 'nathanaelkane/vim-indent-guides'
     Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 
     " Utilities
@@ -72,5 +73,6 @@ lua require("presence-config")
 let g:airline_theme = 'catppuccin'
 let g:airline_powerline_fonts = 1
 " let g:airline#extensions#tabline#enabled = 1
+let g:indent_guides_enable_on_vim_startup = 1
 
 " File browser
