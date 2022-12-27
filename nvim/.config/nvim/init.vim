@@ -52,7 +52,7 @@ call plug#begin()
     Plug 'nvim-tree/nvim-tree.lua'
     
     " Completion / linters / formatters
-    Plug 'neoclide/coc.nvim',  {'branch': 'master', 'do': 'yarn install'}
+    Plug 'neoclide/coc.nvim',  {'branch': 'release'}
     Plug 'godlygeek/tabular'
     Plug 'preservim/vim-markdown'
 
