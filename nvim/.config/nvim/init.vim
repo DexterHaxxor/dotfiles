@@ -52,7 +52,7 @@ call plug#begin()
     Plug 'nvim-tree/nvim-tree.lua'
     
     " Completion / linters / formatters
-    Plug 'neoclide/coc.nvim',  {'branch': 'release'}
+    Plug 'neoclide/coc.nvim', { 'branch': 'release' }
     Plug 'godlygeek/tabular'
     Plug 'preservim/vim-markdown'
 
@@ -72,7 +72,10 @@ lua require("presence-config")
 
 let g:airline_theme = 'catppuccin'
 let g:airline_powerline_fonts = 1
-" let g:airline#extensions#tabline#enabled = 1
+let g:airline_left_sep = "\ue0b4"
+let g:airline_right_sep = "\ue0b6"
+let g:airline_section_z = airline#section#create(["\uE0A1" . '%{line(".")}' . "\uE0A3" . '%{col(".")}'])
+
 let g:indent_guides_enable_on_vim_startup = 1
 
 " File browser
