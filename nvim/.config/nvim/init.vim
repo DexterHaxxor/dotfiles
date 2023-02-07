@@ -74,8 +74,9 @@ let g:airline_theme = 'catppuccin'
 let g:airline_powerline_fonts = 1
 let g:airline_left_sep = "\ue0b4"
 let g:airline_right_sep = "\ue0b6"
-let g:airline_section_z = airline#section#create(["\uE0A1" . '%{line(".")}' . "\uE0A3" . '%{col(".")}'])
+let g:airline_section_z = airline#section#create(["\ue0a1" . '%{line(".")}' . "\ue0a3" . '%{col(".")}'])
 
 let g:indent_guides_enable_on_vim_startup = 1
 
-" File browser
+set list
+set listchars=tab:>-,space:·
