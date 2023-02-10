@@ -18,6 +18,7 @@ opt-level = 3
 lto = true
 overflow-checks = false
 debug-assertions = false
+strip = "debuginfo"
 
 [future-incompat-report]
 frequency = 'always' # when to display a notification about a future incompat report
