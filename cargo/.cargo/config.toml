@@ -9,6 +9,7 @@ rr = "run --release"
 target-dir = ".cargo-artifacts"         # path of where to place all generated artifacts
 rustflags = ["-C", "target-cpu=native"]        # custom flags to pass to all compiler invocations
 incremental = true            # whether or not to enable incremental compilation
+rustc-wrapper = "sccache"
 
 [profile.dev]
 opt-level = 0
