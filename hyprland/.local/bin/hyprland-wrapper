@@ -1,5 +1,6 @@
 #!/bin/sh
-
+#
+source ~/.profile
 cd ~
 
 export XDG_CURRENT_DESKTOP=Hyprland
