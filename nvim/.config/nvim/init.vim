@@ -64,12 +64,12 @@ call plug#begin()
     Plug 'andweeb/presence.nvim'
 call plug#end()
 
-lua require("user.nvim-tree")
-lua require("user.catppuccin")
-lua require("user.coc-nvim")
-lua require("user.nvim-notify")
-lua require("user.bufferline")
-lua require("user.presence")
+lua require("user-nvim-tree")
+lua require("user-catppuccin")
+lua require("user-coc-nvim")
+lua require("user-nvim-notify")
+lua require("user-bufferline")
+lua require("user-presence")
 
 let g:airline_theme = 'catppuccin'
 let g:airline_powerline_fonts = 1
