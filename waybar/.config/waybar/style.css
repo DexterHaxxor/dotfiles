@@ -1,68 +1,139 @@
+@import "macchiato.css";
+
 * {
-	font-size: 14px;
-	font-family: "Hack Nerd Font";
+  /* `otf-font-awesome` is required to be installed for icons */
+  font-family: Nunito;
+  font-weight: bold;
+  font-size: 12px;
 }
 
 window#waybar {
-	background: #292b2e;
-	color: #fdf6e3;
+  background-color: transparent;
+  transition-property: background-color;
+  transition-duration: 0.5s;
 }
 
-#custom-right-arrow-dark,
-#custom-left-arrow-dark {
-	color: #1a1a1a;
-}
-#custom-right-arrow-light,
-#custom-left-arrow-light {
-	color: #292b2e;
-	background: #1a1a1a;
-}
-
-#workspaces,
-#clock,
-#pulseaudio,
-#backlight,
-#tray {
-	background: #1a1a1a;
+window#waybar.hidden {
+  opacity: 0.2;
 }
 
 #workspaces button {
-	padding: 0 2px;
-	color: #fdf6e3;
+  padding: 0 5px;
+  background-color: transparent;
+  color: @text;
+  /* Use box-shadow instead of border so the text isn't offset */
+  /* box-shadow: inset 0 2px @mauve; */
+  /* Avoid rounded borders under each workspace name */
 }
+
 #workspaces button.focused {
-	color: #268bd2;
-}
-#workspaces button:hover {
-	box-shadow: inherit;
-	text-shadow: inherit;
-}
-#clock.3 {
-	background: #1a1a1a;
-	border: #1a1a1a;
-	padding: 0 3px;
+  color: @lavender;
 }
 
-#pulseaudio {
-	color: #268bd2;
-}
-#network {
-	color: #2aa198;
-}
-#backlight {
-	color: #6c71c4;
-}
-#battery {
-	color: #859900;
-}
-#clock {
-	color: #b58900;
+#workspaces button.urgent {
+  background-color: @red;
 }
 
+
+
+#workspaces,
 #clock,
-#pulseaudio,
-#network,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
 #backlight,
-#battery {
-	padding: 0 10px;
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#mpd,
+#window,
+#bluetooth,
+#custom-power-menu {
+  padding: 2px 8px;
+  color: @text;
+  border-bottom: 1px solid @red;
+  border-radius: 5px;
+  background-color: @base;
+}
+
+#custom-power-menu {
+  padding: 0 5px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+  margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+  margin-right: 0;
+}
+
+#battery.charging,
+#battery.full,
+#battery.plugged {
+  color: @green;
+}
+
+@keyframes blink {
+  to {
+    color: @surface2;
+  }
+}
+
+#battery.critical:not(.charging) {
+  color: @yellow;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+label:focus {
+  background-color: #000000;
+}
+
+#temperature.critical {
+  background-color: @red;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: #eb4d4b;
+}
+
+#language {
+  background: #00b093;
+  color: #740864;
+  padding: 0 5px;
+  margin: 0 5px;
+  min-width: 16px;
+}
+
+#keyboard-state {
+  background: #97e1ad;
+  color: #000000;
+  padding: 0 0px;
+  margin: 0 5px;
+  min-width: 16px;
+}
+
+#keyboard-state > label {
+  padding: 0 5px;
+}
+
+#keyboard-state > label.locked {
+  background: rgba(0, 0, 0, 0.2);
 }
