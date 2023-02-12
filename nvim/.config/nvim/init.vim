@@ -37,7 +37,7 @@ call plug#begin()
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'nvim-tree/nvim-web-devicons'
-    Plug 'nathanaelkane/vim-indent-guides'
+    " Plug 'nathanaelkane/vim-indent-guides'
     Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
     Plug 'goolord/alpha-nvim'
 
@@ -70,14 +70,13 @@ lua require("user-coc-nvim")
 lua require("user-nvim-notify")
 lua require("user-bufferline")
 lua require("user-presence")
+lua require("user-alpha")
 
 let g:airline_theme = 'catppuccin'
 let g:airline_powerline_fonts = 1
 let g:airline_left_sep = "\ue0b4"
 let g:airline_right_sep = "\ue0b6"
 let g:airline_section_z = airline#section#create(["\ue0a1" . '%{line(".")}' . "\ue0a3" . '%{col(".")}'])
-
-let g:indent_guides_enable_on_vim_startup = 1
 
 set list
 set listchars=tab:>-,space:·
