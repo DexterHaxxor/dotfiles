@@ -8,7 +8,7 @@
     "spacing": 5, // Gaps between modules (4px)
     "modules-left": ["wlr/workspaces", "cpu", "memory", "tray"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["clock", "backlight", "wireplumber", "network", "battery", "custom/power-menu"],
+    "modules-right": ["clock", "backlight", "wireplumber", "battery", "custom/power-menu"],
     "wlr/workspaces": {
       "on-click": "activate",
       "on-scroll-up": "hyprctl dispatch workspace e+1",
