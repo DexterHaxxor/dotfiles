@@ -39,13 +39,14 @@ call plug#begin()
     Plug 'nvim-tree/nvim-web-devicons'
     Plug 'nathanaelkane/vim-indent-guides'
     Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+    Plug 'goolord/alpha-nvim'
 
     " Utilities
     Plug 'sheerun/vim-polyglot'
     Plug 'jiangmiao/auto-pairs'
     Plug 'ap/vim-css-color'
     Plug 'rcarriga/nvim-notify'   
-    Plug 'akinsho/bufferline.nvim', { 'tag': 'v3.*' }
+    Plug 'akinsho/bufferline.nvim'
 
     " File browser
     Plug 'nvim-tree/nvim-web-devicons' " optional, for file icons
@@ -63,12 +64,12 @@ call plug#begin()
     Plug 'andweeb/presence.nvim'
 call plug#end()
 
-lua require("nvim-tree-config")
-lua require("catppuccin-config")
-lua require("coc-nvim-config")
-lua require("nvim-notify-config")
-lua require("bufferline-config")
-lua require("presence-config")
+lua require("user.nvim-tree")
+lua require("user.catppuccin")
+lua require("user.coc-nvim")
+lua require("user.nvim-notify")
+lua require("user.bufferline")
+lua require("user.presence")
 
 let g:airline_theme = 'catppuccin'
 let g:airline_powerline_fonts = 1
