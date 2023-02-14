@@ -25,7 +25,7 @@ if [[ $(lspci) =~ nvidia ]]; then
   export WLR_NO_HARDWARE_CURSORS=1
 fi
 
-# Log WLR errors and logs to the hyprland log. Recommended
+# Log WLR errors and logs to the Hyprland log. Recommended
 export HYPRLAND_LOG_WLR=1
 
 # Tell XWayland to use a cursor theme
@@ -33,6 +33,9 @@ export XCURSOR_THEME=Bibata-Modern-Classic
 
 # Set a cursor size
 export XCURSOR_SIZE=24
+
+# Makes D-Bus aware of some env vars
+dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 
 exec Hyprland "$@"
 
