@@ -5,16 +5,14 @@ Recommended method for managing dotfiles is having the repository in `~/.dotfile
 
 Waybar configuration is loosely based on https://gitlab.com/Xylight/dotfiles/-/tree/main/
 
-Linux configs:
-- Hyprland
-- Rofi
-- Waybar
-
-Cross-platform configs:
+Active configs:
 - Neovim
 - Kitty
 - Cargo
 
 Abandoned configs:
+- Hyprland
+- Rofi
+- Waybar
 - Emacs
 - Alacritty
