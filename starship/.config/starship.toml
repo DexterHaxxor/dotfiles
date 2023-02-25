@@ -10,7 +10,7 @@ $directory\
 """
 right_format = "$cmd_duration"
 
-continuation_prompt = "[](#f5a97f)[](fg:#8bd5ca bg:#8bd5ca)[](#8bd5ca)"
+continuation_prompt = "[](#ed8796)[](fg:#ed8796 bg:#8bd5ca)[](#8bd5ca)"
 
 add_newline = false
 
